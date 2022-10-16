@@ -1,0 +1,36 @@
+Run = True 
+# Store all the Month in a dictionary 
+month = {
+    "January" : 1,
+    "February" : 2,
+    "March" : 3,
+    "April" : 4,
+    "May" : 5,
+    "June" : 6,
+    "July" : 7,
+    "August" : 8,
+    "September" : 9,
+    "October" : 10,
+    "November" : 11, 
+    "December" : 12, 
+}
+
+# Set a loop unitl run is false 
+while(run):
+    # Take Date as Input 
+    date = input("Enter Date (Format : March 31, 2021 or (-1 to exit) : ")
+    # If inputis -1, then stop the loop
+    if (date == "1"): 
+       run = False 
+       break
+    # Use try and except method to vaildate the input and print the date in
+    # required format 
+    try: 
+        # Split the input and set the date in required format
+        list1 = date.split(" ")
+        new_format = f"{month[list1[0]]}/{list1[1][:-1]}/{list1[2]}"
+        print(new_format)
+    # Print a message if there is invaild format 
+    except Exception as e: 
+        Print("Invaild Input")
+     
